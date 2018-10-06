@@ -67,25 +67,6 @@ def getScripts(soup, domain):
             scripts.append(temp)
     return scripts
 
-
-#ajaxMarkers = ["$.ajax(", "$.get(", "$.getJSON(", "$.getScript(", "$.post("]
-
-#def getAjax(source):
-#    """get ajax request from source"""
-#    ajax = []
-#    for marker in ajaxMarkers:
-#        pos = source.find(marker)
-#        if pos < 0:
-#            continue
-#
-#        tmpSource = source[pos:]
-#        pos = tmpSource.find(")")
-#
-#        tmp = tmpSource[:pos + 1]
-#        tmp = " ".join(tmp.split())
-#        ajax.append(tmp)
-#    return ajax
-
 def getInfo(url):
     """get webpage info"""
 
@@ -102,17 +83,6 @@ def getInfo(url):
     images = getImages(soup, domain)
     css = getCSS(soup, domain)
     scripts = getScripts(soup, domain)
-
-    #ajax = []
-    # get main pages ajax | index.html
-    #ajax = ajax + getAjax(source)
-
-    #get ajax in all scripts
-    #for script in scripts:
-    #    tmplist = []
-    #    scrSource = getSource(script)
-    #    tmplist = getAjax(scrSource)
-    #    ajax = ajax + tmplist
 
     #info dict
     info = {
