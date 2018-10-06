@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pullapart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/script.js"></script>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+
+      <!---Search Box-->
+      <div class="row justify-content-center">
+        <div class="col-sm-3">
+          <form id="searchForm">
+            <div class="form-group">
+              <input type="text" id="url" name="url" class="form-control showSearch" placeholder="http://www.website.com">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <!---Images--->
+        <div id="imgContainer" class="offset-sm-1 col-sm-3">
+          <h3 class="text-center">Images</h3>
+          <ul id="images"></ul>
+        </div>
+
+        <!---Container--->
+        <div id="content" class="offset-sm-1 col-sm-6">
+          <div class="row">
+
+            <!---Links--->
+            <div class="col-sm-12 infoContainer">
+              <h3 class="text-center">Links</h3>
+              <textarea id="links" rows="6" class="form-control"></textarea>
+            </div>
+
+            <!---CSS--->
+            <div class="col-sm-12 infoContainer">
+              <h3 class="text-center">CSS</h3>
+              <textarea id="css" rows="6" class="form-control"></textarea>
+            </div>
+
+            <!---Scripts--->
+            <div class="col-sm-12 infoContainer">
+              <h3 class="text-center">Scripts</h3>
+              <textarea id="scripts" rows="6" class="form-control"></textarea>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
